@@ -61,6 +61,7 @@ while True:
                       Your balance is $3,000,450 and Welcome
                       account balance is-. Thank you for using mobile money
 ''')
+                break
 
     else:
         print('Exaternal application down')
