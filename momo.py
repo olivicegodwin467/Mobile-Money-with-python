@@ -152,17 +152,21 @@ class User_info:
                     ''')
                     choose = int(input('> '))
                     if choose == 1:
-                        confirm_pin = int(input('To confim to get Balance, Enter MM PIN: '))
-                        pin = "0000"
-                        if confirm_pin == pin:
-                            print('''
+                        pin = 1234
+                        for i in range(3):
+                            confirm_pin = int(input('To confim to get Balance, Enter MM PIN: '))
+                            if confirm_pin == pin:
+                                print('''
 
-                                Your balance is $3,000,450 and Welcome
-                                account balance is-. Thank you for using mobile money
-            ''')
-                        else:
-                            print('Wrong PIN 5 times your account will be blocked.')
+                                    Your balance is $3,000,450 and Welcome
+                                    account balance is-. Thank you for using mobile money
+                ''')
+                                break
+                            else:
+                                print(f"Wrong PIN at 3times your accout will be blocked.\n Try again this is your {i+1} try")
 
+                    elif choose == 7 or choose == 0:
+                            exit()
                 else:
                     print('Exaternal application down')
                     break
